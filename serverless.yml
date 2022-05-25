@@ -1,0 +1,15 @@
+component: website
+name: website-GB3fsLt9Qx
+org: '1304083067'
+app: simple-user-website
+stage: dev
+inputs:
+  src:
+    src: ./
+    index: index.html
+    error: index.html
+  region: ap-beijing
+  bucketName: my-bucket-1irmn14
+  protocol: http
+  isAutoCiDeploy: false
+  replace: false
