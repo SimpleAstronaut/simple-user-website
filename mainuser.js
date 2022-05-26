@@ -12,13 +12,23 @@ function getQueryString(name) {
     return null;
 }
 
-window.onload = function(){
+window.onload = function () {
     const user_id = getQueryString("user_id");
     const token = getQueryString("token");
-    $.get("http://127.0.0.1:8082/getinfo", { user_id : user_id, token : token }, function(data, status){
-        var username = JSON.stringify(data.data.USERNAME);
-        var mail = JSON.stringify(data.data.MAIL);
-        var 
+    $.get("https://service-jzdhwuy1-1304083067.bj.apigw.tencentcs.com/release/getinfo", { user_id: user_id, token: token }, function (data, status) {
+        if (data.status == 200) {
+            var username = JSON.stringify(data.data.username);
+            var mail = JSON.stringify(data.data.mail);
+            var avatar = JSON.stringify(data.data.avatar);
+            var groups = JSON.stringify(data.data.groups);
+            var txlevel = JSON.stringify(data.data.txlevel);
+            var gameacc = JSON.stringify(data.data.gameacc);
+            var retime = JSON.stringify(data.data.retime);
+            console.log("succ!");
+        } else{
+            alert("登录错误!");
+            window.location.href="http://login.jdsj.site";
+        }
     })
 }
 
