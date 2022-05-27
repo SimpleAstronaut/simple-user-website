@@ -11,7 +11,7 @@ function login() {
                 if (tokensta == 200) {
                     const token = data.token;
                     if (getQueryString("target") == null) {
-                        const target = "https://my-bucket-1irmn14-1304083067.cos-website.ap-beijing.myqcloud.com/admin.html?user_id=" + user_id + "&token=" + token;
+                        const target = "https://user.jdsj.site/admin.html?user_id=" + user_id + "&token=" + token;
                         window.location.href = target;
                     } else {
                         const target = getQueryString("target") + "?user_id=" + user_id + "&token=" + token;

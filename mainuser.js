@@ -109,7 +109,7 @@ window.onload = function () {
 
         } else{
             alert("登录错误!");
-            window.location.href="https://my-bucket-1irmn14-1304083067.cos-website.ap-beijing.myqcloud.com";
+            window.location.href="https://user.jdsj.site";
         }
     })
 }
